@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Loader</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <h1>Welcome to Becky's <span>page</span></h1>
+    </div>
+    <div class="container">
+      <div id="load"></div>
+    </div>
+    <script>
+      document.querySelector(".main").style.display = "none";
+      document.getElementById("load").classList.add("loader");
+      //set time out
+      setTimeout(function () {
+        document.querySelector(".main").style.display = "block";
+        document.getElementById("load").classList.remove("loader");
+      }, 3000000);
+    </script>
+  </body>
+</html>
